@@ -1,24 +1,26 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import './App.css';
+import VisibleProductList from './containers/VisibleProductList';
+import { ProductList } from './Data';
+import { fetchData } from './actions';
 
 function App() {
+  let hasInitialData: boolean = false;
+  const dispatch = useDispatch();
+  
+  useEffect(() => {
+    if(hasInitialData) {
+      return;
+    }
+    
+    hasInitialData = !hasInitialData;
+    dispatch(fetchData(ProductList));
+  }, []);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <VisibleProductList/>
     </div>
   );
 }
