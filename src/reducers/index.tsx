@@ -1,6 +1,7 @@
 import { combineReducers } from "redux";
 import productList from "./productList";
-import visibilityFilter from "./visibilittyFilter";
+import selectedCategory from "./selectedCategory";
+import categoryList from "./categoryList";
 
 const reducer = (state = {}, action:any) => {
     switch(action.type){
@@ -11,7 +12,8 @@ const reducer = (state = {}, action:any) => {
 
 const rootReducer = combineReducers({
     productList,
-    visibilityFilter
+    selectedCategory,
+    categoryList
 });
 
 export default rootReducer;

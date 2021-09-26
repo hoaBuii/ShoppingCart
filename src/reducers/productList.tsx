@@ -1,10 +1,9 @@
-import { FETCH_DATA, FOOD } from "../constants";
-import { ProductList } from "../Data";
+import { FETCH_PRODUCTS_LIST, FOOD } from "../constants";
 
 const productList = (state = [], action:any) => {
     switch(action.type){
-        case FETCH_DATA:
-            return ProductList;
+        case FETCH_PRODUCTS_LIST:
+            return action.productList;
         default:
             return state;
     }

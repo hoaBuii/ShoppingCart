@@ -4,18 +4,21 @@ import ProductList from "../components/ProductList";
 import { toggleProduct } from "../actions";
 
 function getVisibleProductList(productList?:any, filter?:any){
+    debugger;
     switch(filter){
+        case 'FOOD':
+            return productList.filter((product:any) => {return product.category  === 'FOOD'});
         default:
-            return productList;
+            return [];
     }
 }
 
 const mapStateToProps = (state:any) => ({
-    productList: getVisibleProductList(state.productList,state.filter)
+    productList: getVisibleProductList(state.productList,state.selectedCategory)
 })
 
 const mapDisptachToProps = (dispatch:any) => ({
-    toggleProduct: (id:Number) => dispatch(toggleProduct(id))
+    toggleProduct: (id:number) => dispatch(toggleProduct(id))
 })
 
 export default connect(
