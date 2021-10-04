@@ -6,6 +6,7 @@ import { ProductList} from './Data/productsData';
 import { fetchProductsList, fetchCategoriesList } from './actions';
 import { CategoriesList } from './Data/categoriesData';
 import CategoryList from './containers/CategoryList';
+import CartList from './containers/CartList';
 
 function App() {
   let hasInitialData: boolean = false;
@@ -22,9 +23,10 @@ function App() {
   }, []);
 
   return (
-    <div>
+    <div style={{margin:'0 auto'}}>
       <CategoryList/>
       <VisibleProductList/>
+      <CartList/>
     </div>
   );
 }

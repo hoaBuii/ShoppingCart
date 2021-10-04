@@ -7,7 +7,6 @@ interface IPicker {
 }
 
 function Picker({selectedCategory, categoriesList, onChange}: IPicker){
-    debugger;
     return(
         <select value={selectedCategory} onChange={e => onChange(e.target.value)}>
             {

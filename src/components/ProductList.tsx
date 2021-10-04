@@ -1,30 +1,22 @@
 import React from "react";
 import Product from "./Product";
+import { IProduct,IProductList } from '../interfaces';
 
-interface IProduct {
-    name: string;
-    price: number;
-    quantity: number;
-}
 
-interface IProductList {
-    productList?: Array<IProduct>;
-    toggleProduct?: (id:number)  => {}
-}
-
-function ProductList({productList, toggleProduct}: IProductList){
-    debugger;
-    // const data = [{name:'a'},{name:'b'},{name:'c'}];
-    const data = productList;
+function ProductList({productList, toggleProduct, addCartItem}: IProductList){
+    const onClickProductItem:any = (product:IProduct) => {
+        toggleProduct(product.id);
+        addCartItem(product);
+    }
     return(
-        <ul>
+        <div style={{borderBottom: "1px solid black", marginBottom: "10px", paddingBottom: "10px"}}>
             { productList && productList.length 
               && productList.map((product,index) => {
                 return(
-                    <Product key={index} {...product}/>
+                    <Product key={index} {...product} onToggle={() => onClickProductItem(product)}/>
                 );
             })}
-        </ul>
+        </div>
     );
 };
 
