@@ -1,7 +1,6 @@
 import { ADD_CART_ITEM, BUY_CART } from "../constants";
 
 const cartList = (state = [], action:any) => {
-    debugger;
     switch(action.type){
         case ADD_CART_ITEM:
             let cartItem  = action?.product?.id && state?.filter((item:any)=>{ return item.id === action.product.id});
