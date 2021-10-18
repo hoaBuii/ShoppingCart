@@ -8,26 +8,33 @@ import { CategoriesList } from './Data/categoriesData';
 import CategoryList from './containers/CategoryList';
 import CartList from './containers/CartList';
 
+// ADD FOLDER CSS
+import './css/bootstrap.min.css';
+import './css/owl.carousel.min.css';
+import './css/owl.theme.default.min.css';
+import './css/core.css';
+import './css/shortcode/shortcodes.css';
+import './style.css';
+import './css/responsive.css';
+import './css/custom.css';
+
+import Shopping from './components/shopping/shopping';
+
 function App() {
-  // let hasInitialData: boolean = false;
   const dispatch = useDispatch();
-  
+
   useEffect(() => {
-    // if(hasInitialData) {
-    //   return;
-    // }
-    
-    // hasInitialData = !hasInitialData;
     dispatch(fetchAPIProductsList());
-    // dispatch(fetchProductsList(ProductList));
     dispatch(fetchCategoriesList(CategoriesList));
   }, []);
 
   return (
     <div style={{margin:'0 auto'}}>
-      <CategoryList/>
+      {/* <CategoryList/>
       <VisibleProductList/>
-      <CartList/>
+      <CartList/> */}
+
+      <Shopping/>
     </div>
   );
 }
