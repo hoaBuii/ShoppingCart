@@ -4,6 +4,7 @@ export interface IProduct {
     price: number;
     quantity: number;
     category: string;
+    image: string;
     onToggle: ()=>{};
 }
 
@@ -13,6 +14,7 @@ export interface ICart {
     price: number;
     quantity: number;
     category: string;
+    image: string;
 }
 
 export interface ICartList {

@@ -54,7 +54,6 @@ export const fetchAPIProductsList = () => (dispatch:any) => {
 
     return axios.get('https://616517e809a29d0017c88f52.mockapi.io/Products')
         .then(function(response){
-            debugger;
             let productList = response.data;
             dispatch(fetchProductsList(productList));
             console.log(productList);
