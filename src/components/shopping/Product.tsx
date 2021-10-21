@@ -15,7 +15,7 @@ function Product(){
                 <div className="product__inner">
                     <div className="pro__thumb">
                         <a href="#">
-                            <img src={require("../../assets/images/product/1.png").default} alt="product images"/>
+                            <img src={require("../../assets/images/shopping-product/aosomi4.png").default} alt="product images"/>
                         </a>
                     </div>
                     <div className="product__hover__info">
