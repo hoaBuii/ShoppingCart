@@ -1,8 +1,7 @@
 import React from "react";
 import { IProduct } from '../../interfaces';
 
-// function Product({id, name, price, quantity, onToggle}: IProduct){
-function Product(){
+function Product({id, name, price, quantity, image, onToggle}: IProduct){
     return(
         // <div style={{marginTop:'10px'}}>
         //     <span>{name}, {price}VND, {quantity}</span>
@@ -15,22 +14,22 @@ function Product(){
                 <div className="product__inner">
                     <div className="pro__thumb">
                         <a href="#">
-                            <img src={require("../../assets/images/shopping-product/aosomi4.png").default} alt="product images"/>
+                            <img src={require(`../../assets/images/shopping-product/${image}`).default} alt="product images"/>
                         </a>
                     </div>
                     <div className="product__hover__info">
                         <ul className="product__action">
                             <li><a data-toggle="modal" data-target="#productModal" title="Quick View" className="quick-view modal-view detail-link" href="#"><span className="ti-plus"></span></a></li>
-                            <li><a title="Add TO Cart" href="cart.html"><span className="ti-shopping-cart"></span></a></li>
+                            <li><a title="Add To Cart" href="cart.html"><span className="ti-shopping-cart"></span></a></li>
                             <li><a title="Wishlist" href="wishlist.html"><span className="ti-heart"></span></a></li>
                         </ul>
                     </div>
                 </div>
                 <div className="product__details">
-                    <h2><a href="product-details.html">Simple Black Clock</a></h2>
+                    <h2><a href="product-details.html">{name}</a></h2>
                     <ul className="product__price">
-                        <li className="old__price">$16.00</li>
-                        <li className="new__price">$10.00</li>
+                        {/* <li className="old__price">$16.00</li> */}
+                        <li className="new__price">{price}VND</li>
                     </ul>
                 </div>
             </div>

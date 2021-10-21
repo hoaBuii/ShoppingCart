@@ -25,7 +25,7 @@ function App() {
 
   useEffect(() => {
     dispatch(fetchAPIProductsList());
-    dispatch(fetchCategoriesList(CategoriesList));
+    // dispatch(fetchCategoriesList(CategoriesList));
   }, []);
 
   return (

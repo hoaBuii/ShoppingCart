@@ -2,6 +2,7 @@ import React from "react";
 import Product from "./Product";
 import VisibleProductList from "../../containers/VisibleProductList";
 import Picker from "./Picker";
+import CategortyList from '../../containers/CategoryList';
 
 const Shopping = () => {
     return(
@@ -322,7 +323,7 @@ const Shopping = () => {
                                 </div>
                             </div>
                         </div> */}
-                        <Picker/>
+                        <CategortyList/>
 
                         {/* <div className="row">
                             <div className="product__list another-product-style">

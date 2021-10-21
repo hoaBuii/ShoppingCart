@@ -1,6 +1,7 @@
 export const CategoriesList = [
-    {name:'FOOD'},
-    {name:'CLOTHES'},
-    {name:'SHOES'},
-    {name:'ELECTRICS'},
+    {name:'All'},
+    {name:'T-Shirt'},
+    {name:'Polo-Shirt'},
+    {name:'Kaki-Pants'},
+    {name:'Jeans-Pants'},
 ];

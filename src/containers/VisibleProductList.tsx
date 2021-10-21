@@ -6,21 +6,23 @@ import { IProduct } from "../interfaces";
 
 function getVisibleProductList(productList?:any, filter?:any){
     switch(filter){
-        case 'FOOD':
-            return productList.filter((product:any) => {return product.category  === 'FOOD'});
-        case 'CLOTHES':
-            return productList.filter((product:any) => {return product.category  === 'CLOTHES'});
-        case 'SHOES':
-            return productList.filter((product:any) => {return product.category  === 'SHOES'});
-        case 'ELECTRICS':
-            return productList.filter((product:any) => {return product.category  === 'ELECTRICS'});
+        case 'All':
+            return productList;
+        case 'T-Shirt':
+            return productList.filter((product:any) => {return product.category  === 'T-Shirt'});
+        case 'Polo-Shirt':
+            return productList.filter((product:any) => {return product.category  === 'Polo-Shirt'});
+        case 'Kaki-Pants':
+            return productList.filter((product:any) => {return product.category  === 'Kaki-Pants'});
+        case 'Jeans-Pants':
+            return productList.filter((product:any) => {return product.category  === 'Jeans-Pants'});
         default:
             return [];
     }
 }
 
 const mapStateToProps = (state:any) => ({
-    productList: getVisibleProductList(state.productList,state.selectedCategory)
+    productList: getVisibleProductList(state.productList, state.selectedCategory)
 })
 
 const mapDisptachToProps = (dispatch:any) => ({
