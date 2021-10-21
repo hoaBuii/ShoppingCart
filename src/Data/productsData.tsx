@@ -1,6 +1,7 @@
 import {FOOD} from "../constants";
 
-export const ProductList = [
+// export const ProductList = [
+export const ProductListt = [
     {
         id: 1,
         name: 'Banh Chocopie',

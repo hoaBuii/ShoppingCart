@@ -1,6 +1,6 @@
 import { connect } from "react-redux";
 import React from "react";
-import ProductList from "../components/ProductList";
+import ProductList from "../components/shopping/ProductList";
 import { toggleProduct, addCartItem } from "../actions";
 import { IProduct } from "../interfaces";
 

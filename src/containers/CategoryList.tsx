@@ -1,7 +1,7 @@
 import { connect } from "react-redux";
 import React from "react";
 import { toggleCategory } from "../actions";
-import Picker from "../components/Picker";
+import Picker from "../components/shopping/Picker";
 
 const mapStateToProps = (state:any) => ({
     categoriesList: state.categoryList,

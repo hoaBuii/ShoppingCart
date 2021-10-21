@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import './App.css';
 import VisibleProductList from './containers/VisibleProductList';
-import { ProductList} from './Data/productsData';
+// import { ProductList} from './Data/productsData';
 import { fetchProductsList, fetchCategoriesList, fetchAPIProductsList } from './actions';
 import { CategoriesList } from './Data/categoriesData';
 import CategoryList from './containers/CategoryList';

@@ -1,7 +1,8 @@
 import React from "react";
-import { IProduct } from '../interfaces';
+import { IProduct } from '../../interfaces';
 
-function Product({id, name, price, quantity, onToggle}: IProduct){
+// function Product({id, name, price, quantity, onToggle}: IProduct){
+function Product(){
     return(
         // <div style={{marginTop:'10px'}}>
         //     <span>{name}, {price}VND, {quantity}</span>
